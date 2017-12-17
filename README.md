@@ -8,4 +8,5 @@ Through the Bellman-Ford Algorithm I am creating a crypto-currency exchange prog
 
 Special thanks to Joninviski for the Bellman-Ford python code: https://gist.github.com/joninvski/701720
 
-Special thanks to rosshochwert for inspiration and implementation of bellman ford code.
+Special thanks to rosshochwert for inspiration and implementation of bellman ford/arbitrage code.
+https://github.com/rosshochwert/arbitrage/blob/master/arbitrage.py
