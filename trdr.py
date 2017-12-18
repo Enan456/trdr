@@ -1,11 +1,17 @@
 # http://docs.python-requests.org/en/master/
 # https://github.com/ericsomdahl/python-bittrex/blob/master/bittrex/bittrex.py
 from bittrex import Bittrex
-import time
+import time, math, urllib2, json, re
+
 TIME = 20
 MARGIN_UP = 55
 MARGIN_DOWN = 25
 API_KEY =  0
+#init bitterex download
+def download():
+	Bitterex.
+
+#from abritarge by ericsomdahl
 # Step 1: For each node prepare the destination and predecessor
 def initialize(graph, source):
     d = {} # Stands for destination
