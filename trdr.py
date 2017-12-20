@@ -7,13 +7,19 @@ TIME = 20
 MARGIN_UP = 55
 MARGIN_DOWN = 25
 API_KEY =  0
+SELF = 1
+API_SECRET = 0
+
 #init bitterex download
-def download():
-	Bitterex.
+def initbase():
+	Bitterex._init_(SELF,API_KEY,API_SECRET)
+	
+def initbitterex():
+	
 
 #from abritarge by ericsomdahl
 # Step 1: For each node prepare the destination and predecessor
-def initialize(graph, source):
+def initializealgo(graph, source):
     d = {} # Stands for destination
     p = {} # Stands for predecessor
     for node in graph:
@@ -57,12 +63,14 @@ def bellman_ford(graph, source):
         		return(retrace_negative_loop(p, source))
     return None
 
-paths = []
+def repeater(iterator, i):
+	for i in iterator:
+		paths = []
 
-graph = download()
+		graph = download()
 
-for key in graph:
-	path = bellman_ford(graph, key)
-	if path not in paths and not None:
-		paths.append(path)
+		for key in graph:
+			path = bellman_ford(graph, key)
+			if path not in paths and not None:
+				paths.append(path)
   
