@@ -1,20 +1,26 @@
 # http://docs.python-requests.org/en/master/
 # https://github.com/ericsomdahl/python-bittrex/blob/master/bittrex/bittrex.py
 from bittrex import Bittrex
-import time, math, urllib2, json, re
+import time, math, urllib2, json, re,os
 
 TIME = 20
+CHECKER = 10	
+
 MARGIN_UP = 55
 MARGIN_DOWN = 25
 API_KEY =  0
 SELF = 1
 API_SECRET = 0
 
-#init bitterex download
+#init bitterex download @enan
+cwd = os.getcwd()
 def initbase():
 	Bitterex._init_(SELF,API_KEY,API_SECRET)
+	phist= open('phist.txt','w')
+	rhist = open('route.txt','w')
 	
-def initbitterex():
+	
+def initbitterexdown():
 	
 
 #from abritarge by ericsomdahl
@@ -62,7 +68,12 @@ def bellman_ford(graph, source):
         	if d[v] < d[u] + graph[u][v]:
         		return(retrace_negative_loop(p, source))
     return None
-
+#@enan core function
+def writer_price(text):
+	phist.write(text)
+	
+def
+	
 def repeater(iterator, i):
 	for i in iterator:
 		paths = []
